@@ -53,7 +53,6 @@ module.exports = {
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/explicit-member-accessibility': ['warn', { accessibility: 'no-public' }],
     '@typescript-eslint/interface-name-prefix': ['off'],
-    '@next/next/no-img-element': ['off'],
   },
   'overrides': [{
     'files': ['*.json'],
