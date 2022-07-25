@@ -11,12 +11,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     library: 'frontendLibrary',
     libraryTarget: 'umd',
+    assetModuleFilename: '[base]',
   },
   plugins: [
     new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: 'src/static', to: 'static' },
         { from: 'src/styles', to: 'styles' },
       ],
     }),
@@ -58,21 +58,21 @@ module.exports = {
         use: ['@svgr/webpack', 'url-loader'],
       },
       {
-        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-          },
-        }],
+        test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/fonts/[file]',
+        },
       },
     ],
   },
   resolve: {
     alias: {
       '~': path.resolve(__dirname, 'src/'),
+      '@static': path.resolve(__dirname, 'src/static/'),
     },
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
   externals: [nodeExternals()],
+  devtool: 'source-map',
 };
