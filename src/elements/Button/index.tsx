@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, forwardRef, RefObject, useCallback } from 'react';
 import clsx from 'clsx';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 import { PaletteColorClasses } from '~/interfaces/colors';
 
@@ -23,13 +23,11 @@ interface InitialProps {
 
 interface LinkProps extends InitialProps, AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
-  passHref?: boolean;
   externalLink?: boolean;
 }
 
 interface ButtonProps extends InitialProps, ButtonHTMLAttributes<HTMLButtonElement> {
   href?: undefined;
-  passHref?: undefined;
   externalLink?: undefined;
 }
 
@@ -39,7 +37,6 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
   const {
     children,
     href,
-    passHref,
     externalLink,
     iconButton,
     large,
@@ -103,10 +100,7 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
             <Content />
           </a>
         ) : (
-          <Link
-            href={href}
-            passHref={passHref}
-          >
+          <Link to={href}>
             <a
               className={classes}
               ref={ref as RefObject<HTMLAnchorElement>}
