@@ -9,7 +9,8 @@
     "lint": "eslint './**/*.{ts,json,js}'",
     "copyassets": "node ./build-scripts/copyassets.js",
     "build": "webpack",
-    "postbuild": "npm run copyassets"
+    "postbuild": "npm run copyassets",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
