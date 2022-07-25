@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import clsx from 'clsx';
 
-import useAppContext from '~/lib/useAppContext';
+import useLibraryContext from '~/lib/useLibraryContext';
 
 import styles from './styles.module.scss';
 
@@ -11,7 +11,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 }
 
 const Toast: React.FC<Props> = ({ children, type = 'info' }) => {
-  const { setGlobalInfo, setGlobalError } = useAppContext();
+  const { setGlobalInfo, setGlobalError } = useLibraryContext();
 
   const handleClose = () => {
     setGlobalInfo('');

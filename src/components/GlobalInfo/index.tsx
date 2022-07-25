@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Toast from '~/components/Toast';
-import useAppContext from '~/lib/useAppContext';
+import useLibraryContext from '~/lib/useLibraryContext';
 
 const GlobalInfo: React.FC = () => {
-  const { globalInfo } = useAppContext();
+  const { globalInfo } = useLibraryContext();
 
   if (!globalInfo) {
     return null;

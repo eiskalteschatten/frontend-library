@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Toast from '~/components/Toast';
-import useAppContext from '~/lib/useAppContext';
+import useLibraryContext from '~/lib/useLibraryContext';
 
 const GlobalError: React.FC = () => {
-  const { globalError } = useAppContext();
+  const { globalError } = useLibraryContext();
 
   if (!globalError) {
     return null;
