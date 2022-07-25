@@ -1,0 +1,8 @@
+@import "../../../styles/mixins";
+
+.chip {
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  @include paletteColorBackgrounds;
+}
