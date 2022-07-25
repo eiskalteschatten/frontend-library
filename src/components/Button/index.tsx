@@ -1,6 +1,5 @@
-import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, forwardRef, RefObject, useCallback } from 'react';
+import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, forwardRef, RefObject, useCallback, ComponentType } from 'react';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
 
 import { PaletteColorClasses } from '~/interfaces/colors';
 
@@ -19,16 +18,16 @@ interface InitialProps {
   ref?: React.ForwardedRef<HTMLAnchorElement | HTMLButtonElement>;
   showLoader?: boolean;
   contentClassName?: string;
+  component?: ComponentType<any>;
+  innerComponent?: ComponentType<any>;
 }
 
 interface LinkProps extends InitialProps, AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
-  externalLink?: boolean;
 }
 
 interface ButtonProps extends InitialProps, ButtonHTMLAttributes<HTMLButtonElement> {
   href?: undefined;
-  externalLink?: undefined;
 }
 
 type Props = LinkProps | ButtonProps;
@@ -37,7 +36,6 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
   const {
     children,
     href,
-    externalLink,
     iconButton,
     large,
     primary,
@@ -48,6 +46,8 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
     showLoader,
     contentClassName,
     className,
+    component: Component,
+    innerComponent: InnerComponent,
     ...leftoverProps
   } = props;
 
@@ -90,7 +90,22 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
 
     return (
       <>
-        {externalLink ? (
+        {Component ? (
+          <Component
+            to={href}
+            className={classes}
+            ref={ref as RefObject<any>}
+            {...leftoverProps}
+          >
+            {InnerComponent ? (
+              <InnerComponent>
+                <Content />
+              </InnerComponent>
+            ) : (
+              <Content />
+            )}
+          </Component>
+        ) : (
           <a
             href={href}
             className={classes}
@@ -99,20 +114,10 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
           >
             <Content />
           </a>
-        ) : (
-          <Link to={href}>
-            <a
-              className={classes}
-              ref={ref as RefObject<HTMLAnchorElement>}
-              {...leftoverProps as Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>}
-            >
-              <Content />
-            </a>
-          </Link>
         )}
       </>
     );
-  }, [externalLink, classes, icon, children, iconRight, showLoader]);
+  }, [Component, classes, icon, children, iconRight, showLoader]);
 
   return (
     <>

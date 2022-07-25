@@ -38,7 +38,6 @@
     "husky": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
     "sass": "^1.54.0",
     "sass-loader": "^13.0.2",
     "sass-resources-loader": "^2.2.5",
@@ -52,8 +51,7 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0"
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "clsx": "^1.2.1"
