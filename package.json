@@ -1,5 +1,5 @@
 {
-  "name": "@alexseifert/react-components",
+  "name": "@alexseifert/frontend-library",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eiskalteschatten/react-components.git"
+    "url": "git+https://github.com/eiskalteschatten/frontend-library.git"
   },
   "author": "Alex Seifert",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eiskalteschatten/react-components/issues"
+    "url": "https://github.com/eiskalteschatten/frontend-library/issues"
   },
-  "homepage": "https://github.com/eiskalteschatten/react-components#readme",
+  "homepage": "https://github.com/eiskalteschatten/frontend-library#readme",
   "files": [
     "dist",
     "styles"
