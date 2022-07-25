@@ -37,5 +37,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-dist
-styles
+./dist
+./styles
