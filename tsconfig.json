@@ -23,6 +23,7 @@
     "baseUrl": "./src",
     "paths": {
       "~/*": ["./*"],
+      "@static/*": ["static/*"],
     },
     "outDir": "./dist",
     "pretty": true,
