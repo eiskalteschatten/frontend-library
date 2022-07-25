@@ -1,0 +1,33 @@
+$paletteBlue: #4285f4;
+$paletteDarkBlue: #01579b;
+$paletteYellow: #fbbc05;
+$paletteRed: #ea4335;
+$paletteGreen: #24a853;
+$paletteOrange: #ff8f00;
+$paletteDarkGray: #2F3436;
+$paletteLightGray: #D3D3D3;
+
+$lightBg: #f8f9fa;
+$lightColor: #121212;
+$lightPrimaryColor: $paletteBlue;
+$lightBorderColor: #e9e9e9;
+
+$darkBg: #1b1b1c;
+$darkColor: #f8f9fa;
+$darkPrimaryColor: $paletteBlue;
+$darkBorderColor: #333333;
+
+$successColor: $paletteGreen;
+$errorColor: $paletteRed;
+
+$offCanvasZIndex: 1000000;
+$dialogZIndex: $offCanvasZIndex * 10;
+
+$dialogPadding: 10px;
+
+$xsMax: 767px;
+$smMax: 992px;
+$mdMax: 1200px;
+$smMin: $xsMax + 1px;
+$mdMin: $smMax + 1px;
+$lgMin: $mdMax + 1px;

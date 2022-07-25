@@ -1,0 +1,90 @@
+@import "./variables";
+
+@mixin formBase {
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  transition: background-color 150ms, color 150ms;
+  color: var(--color);
+
+  &:hover:not(:disabled) {
+    background-color: darken($lightBg, 6%);
+    color: var(--color);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: lighten($darkBg, 5%);
+    }
+  }
+
+  &:active:not(:disabled), &:not(button):focus {
+    background-color: darken($lightBg, 10%);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: lighten($darkBg, 3%);
+    }
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+@mixin hoverActiveBackgrounds($_lightBg: $lightBg, $_darkBg: $darkBg) {
+  &:hover {
+    background-color: darken($_lightBg, 6%);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: lighten($_darkBg, 3%);
+    }
+  }
+
+  &:active {
+    background-color: darken($_lightBg, 10%);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: lighten($_darkBg, 7%);
+    }
+  }
+}
+
+@mixin paletteColorBackgrounds {
+  &.blue {
+    background-color: $paletteBlue;
+    color: $darkColor;
+  }
+
+  &.darkBlue {
+    background-color: $paletteDarkBlue;
+    color: $darkColor;
+  }
+
+  &.gray {
+    background-color: $paletteLightGray;
+    color: $lightColor;
+  }
+
+  &.darkGray {
+    background-color: $paletteDarkGray;
+    color: $darkColor;
+  }
+
+  &.orange {
+    background-color: $paletteOrange;
+    color: $lightColor;
+  }
+
+  &.yellow {
+    background-color: $paletteYellow;
+    color: $lightColor;
+  }
+
+  &.red {
+    background-color: $paletteRed;
+    color: $darkColor;
+  }
+
+  &.green {
+    background-color: $paletteGreen;
+    color: $lightColor;
+  }
+}

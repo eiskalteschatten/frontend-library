@@ -1,0 +1,45 @@
+@import "./variables";
+
+:root {
+  --background-color: #{$lightBg};
+  --opposite-background-color: #{$darkBg};
+  --color: #{$lightColor};
+  --opposite-color: #{$darkColor};
+  --primary-color: #{$lightPrimaryColor};
+  --border-color: #{$lightBorderColor};
+  --footer-background-color: #{darken($lightBg, 5%)};
+  --toolbar-height: #{$toolbarHeightLgUp};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #{$darkBg};
+    --opposite-background-color: #{$lightBg};
+    --color: #{$darkColor};
+    --opposite-color: #{$lightColor};
+    --primary-color: #{$darkPrimaryColor};
+    --border-color: #{$darkBorderColor};
+    --footer-background-color: #{lighten($darkBg, 5%)};
+  }
+}
+
+html, body {
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--color);
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: var(--primary-color);
+
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 20px 0 50px 0;
+}
