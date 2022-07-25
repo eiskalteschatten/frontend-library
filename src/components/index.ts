@@ -11,5 +11,8 @@ export * as Input from './BackgroundCover';
 export * as Select from './Select';
 export * as SelectableList from './SelectableList';
 export * as Spinner from './Spinner';
+export * as TabBar from './TabBar';
+export * as TabContents from './TabContents';
+export * as Tabs from './Tabs';
 export * as TextArea from './TextArea';
 export * as Toast from './Toast';

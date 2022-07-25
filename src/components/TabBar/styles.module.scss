@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid $lightBorderColor;
+
+  @media (prefers-color-scheme: dark) {
+    border-bottom: 1px solid $darkBorderColor;
+  }
+
+  .tab {
+    user-select: none;
+    padding: 10px 15px;
+    font-size: .9em;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+
+    &.active {
+      border-bottom: 2px solid $primaryColor;
+      background-color: darken($lightBg, 6%);
+
+      @media (prefers-color-scheme: dark) {
+        background-color: darken($darkBg, 3%);
+      }
+    }
+  }
+}
