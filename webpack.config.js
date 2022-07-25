@@ -9,7 +9,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    library: '@alexseifert/react-components',
+    library: 'frontendLibrary',
     libraryTarget: 'umd',
   },
   plugins: [
@@ -42,6 +42,7 @@ module.exports = {
               resources: [
                 './src/styles/_mixins.scss',
                 './src/styles/_variables.scss',
+                './src/styles/_fonts.scss',
               ],
             },
           },
