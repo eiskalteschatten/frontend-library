@@ -13,15 +13,10 @@
   max-width: calc(100% - #{$marginEdgeOfScreen});
   max-height: calc(100% - #{$marginEdgeOfScreen});
   overflow: hidden;
-  background-color: $lightBg;
+  background-color: var(--background-color);
   border-radius: 5px;
   box-shadow: 0 0 12px rgba(0, 0, 0, .3);
-  border: 1px solid $lightBorderColor;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $darkBg;
-    border: 1px solid $darkBorderColor;
-  }
+  border: 1px solid var(--border-color);
 
   &.fullScreen {
     width: calc(100% - #{$marginEdgeOfScreen});

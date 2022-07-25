@@ -15,14 +15,10 @@
     outline: none;
     padding: 4px 10px;
     border: none;
-    color: $lightColor;
+    color: var(--color);
 
     &.error {
       border: 1px solid $errorColor;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      color: $darkColor;
     }
   }
 

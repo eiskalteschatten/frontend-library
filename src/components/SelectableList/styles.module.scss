@@ -5,11 +5,10 @@
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  border: 1px solid $lightBorderColor;
+  border: 1px solid var(--border-color);
   background-color: darken($lightBg, 5%);
 
   @media (prefers-color-scheme: dark) {
-    border: 1px solid $darkBorderColor;
     background-color: darken($darkBg, 2%);
   }
 
@@ -51,11 +50,10 @@
   }
 
   .toolbar {
-    border-top: 1px solid $lightBorderColor;
+    border-top: 1px solid var(--border-color);
     background-color: darken($lightBg, 2%);
 
     @media (prefers-color-scheme: dark) {
-      border-top: 1px solid $darkBorderColor;
       background-color: lighten($darkBg, 2%);
     }
 
@@ -65,12 +63,8 @@
       cursor: default;
       border: none;
       background-color: transparent;
-      border-right: 1px solid $lightBorderColor;
+      border-right: 1px solid var(--border-color);
       font-size: 12px;
-
-      @media (prefers-color-scheme: dark) {
-        border-right: 1px solid $darkBorderColor;
-      }
     }
   }
 }
