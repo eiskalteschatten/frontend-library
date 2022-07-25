@@ -1,0 +1,8 @@
+@import "../../../styles/mixins";
+
+.buttonBase {
+  @include formBase;
+
+  padding: 3px 10px;
+  white-space: nowrap;
+}
