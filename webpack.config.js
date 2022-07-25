@@ -28,10 +28,8 @@ module.exports = {
             loader: 'sass-resources-loader',
             options: {
               resources: [
-                './src/styles/_breakpoints.scss',
                 './src/styles/_mixins.scss',
                 './src/styles/_variables.scss',
-                './src/styles/_functions.scss'
               ],
             },
           },
