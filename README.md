@@ -1,4 +1,4 @@
-# react-components
+# Frontend Library
 A mix of React components and frontend resources used across multiple projects.
 
 ---
