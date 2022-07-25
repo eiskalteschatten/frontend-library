@@ -1,19 +1,12 @@
 node_modules
 test/performance-results
+test/unit/data
 test-results
-test-coverage
 
 *.spec.js
-*.spec.ts
-jasmine-runner-api.js
+*.min.js
 
 dist
-_docs
 build
 
-package-lock.json
-
-src/lib/tests/*.ts
-
-# Remove all copied JS files from linting. They will be linted once converted to TypeScript.
-src/components/**/*.js
+tsconfig.json

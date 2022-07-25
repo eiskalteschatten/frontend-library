@@ -7,7 +7,7 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     library: '@alexseifert/react-components',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
@@ -21,7 +21,7 @@ module.exports = {
               modules: {
                 localIdentName: '[hash:base64:5]',
               },
-            }
+            },
           },
           { loader: 'sass-loader' },
           {
@@ -38,7 +38,7 @@ module.exports = {
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
-        use: 'ts-loader'
+        use: 'ts-loader',
       },
       {
         test: /\.svg$/,
