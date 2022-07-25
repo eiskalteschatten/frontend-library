@@ -1,0 +1,76 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.list {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  border: 1px solid $lightBorderColor;
+  background-color: darken($lightBg, 5%);
+
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid $darkBorderColor;
+    background-color: darken($darkBg, 2%);
+  }
+
+  .items {
+    flex-grow: 1;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .item {
+      user-select: none;
+      padding: 5px;
+      font-size: 14px;
+      display: flex;
+      gap: 10px;
+      padding: 12px 15px;
+
+      &.selected {
+        opacity: 1;
+        background-color: darken($lightBg, 15%);
+
+        @media (prefers-color-scheme: dark) {
+          background-color: darken($darkBg, 7%);
+        }
+      }
+
+      .icon, .icon > img {
+        width: 20px;
+      }
+
+      .label {
+        flex-grow: 1;
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .toolbar {
+    border-top: 1px solid $lightBorderColor;
+    background-color: darken($lightBg, 2%);
+
+    @media (prefers-color-scheme: dark) {
+      border-top: 1px solid $darkBorderColor;
+      background-color: lighten($darkBg, 2%);
+    }
+
+    .toolbarButton {
+      @include hoverActiveBackgrounds;
+
+      cursor: default;
+      border: none;
+      background-color: transparent;
+      border-right: 1px solid $lightBorderColor;
+      font-size: 12px;
+
+      @media (prefers-color-scheme: dark) {
+        border-right: 1px solid $darkBorderColor;
+      }
+    }
+  }
+}

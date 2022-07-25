@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+
+.checkbox {
+  display: inline-block;
+
+  .label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    user-select: none;
+  }
+
+  .input {
+    background-color: transparent;
+    outline: none;
+    padding: 4px 10px;
+    border: none;
+    color: $lightColor;
+
+    &.error {
+      border: 1px solid $errorColor;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: $darkColor;
+    }
+  }
+
+  .errorMessage {
+    font-size: .8em;
+    margin-left: 20px;
+    color: $errorColor;
+  }
+}
+
