@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.filter {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: darken($lightBg, 1%);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: darken($darkBg, 2%);
+  }
+}
+
+.items {
+  height: 300px;
+  width: 100%;
+  overflow: auto;
+
+  .item {
+    user-select: none;
+  }
+}
