@@ -3,11 +3,7 @@
 .tabs {
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid $lightBorderColor;
-
-  @media (prefers-color-scheme: dark) {
-    border-bottom: 1px solid $darkBorderColor;
-  }
+  border-bottom: 1px solid var(--border-color);
 
   .tab {
     user-select: none;
@@ -17,7 +13,7 @@
     border-radius: 0;
 
     &.active {
-      border-bottom: 2px solid $primaryColor;
+      border-bottom: 2px solid var(--primary-color);
       background-color: darken($lightBg, 6%);
 
       @media (prefers-color-scheme: dark) {
