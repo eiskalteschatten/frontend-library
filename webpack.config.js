@@ -6,7 +6,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
-    library: '@alexseifert/',
+    library: '@alexseifert/react-components',
     libraryTarget: 'umd'
   },
   module: {
