@@ -1,4 +1,7 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: 'production',
@@ -9,6 +12,15 @@ module.exports = {
     library: '@alexseifert/react-components',
     libraryTarget: 'umd',
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/static', to: 'static' },
+        { from: 'src/styles', to: 'styles' },
+      ],
+    }),
+  ],
   module: {
     rules: [
       {
@@ -52,4 +64,5 @@ module.exports = {
     },
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
+  externals: [nodeExternals()],
 };
