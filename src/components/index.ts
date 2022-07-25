@@ -4,6 +4,7 @@ export * as ButtonBase from './ButtonBase';
 export * as Card from './Card';
 export * as Checkbox from './Checkbox';
 export * as Chip from './Chip';
+export * as CollapsibleBox from './CollapsibleBox';
 export * as Dialog from './Dialog';
 export * as DialogActionBar from './DialogActionBar';
 export * as DialogContent from './DialogContent';
