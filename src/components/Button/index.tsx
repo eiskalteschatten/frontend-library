@@ -18,8 +18,8 @@ interface InitialProps {
   ref?: React.ForwardedRef<HTMLAnchorElement | HTMLButtonElement>;
   showLoader?: boolean;
   contentClassName?: string;
-  component?: React.FC<any>;
-  innerComponent?: React.FC<any>;
+  component?: React.FC<any> | ComponentType<any>;
+  innerComponent?: React.FC<any> | ComponentType<any>;
 }
 
 interface LinkProps extends InitialProps, AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -95,7 +95,8 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
       <>
         {Component ? (
           <Component
-            to={href}
+            to={href}  // react-router-dom Link
+            href={href}  // next/link
             className={classes}
             ref={ref as RefObject<any>}
             {...leftoverProps}
