@@ -18,16 +18,19 @@ interface InitialProps {
   ref?: React.ForwardedRef<HTMLAnchorElement | HTMLButtonElement>;
   showLoader?: boolean;
   contentClassName?: string;
-  component?: ComponentType<any>;
-  innerComponent?: ComponentType<any>;
+  component?: React.FC<any>;
+  innerComponent?: React.FC<any>;
 }
 
 interface LinkProps extends InitialProps, AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
+  // passHref is for the next/link component
+  passHref?: boolean;
 }
 
 interface ButtonProps extends InitialProps, ButtonHTMLAttributes<HTMLButtonElement> {
   href?: undefined;
+  passHref?: undefined;
 }
 
 type Props = LinkProps | ButtonProps;
