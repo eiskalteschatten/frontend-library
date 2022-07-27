@@ -15,11 +15,6 @@ interface Props {
 const FLWrapper: React.FC<Props> = ({ children }) => {
   return (
     <LibraryProviderWrapper>
-      {/*
-        1. Context
-        2. ?
-      */}
-
       <GlobalInfo />
       <GlobalError />
 
