@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, forwardRef, RefObject, useCallback, ComponentType } from 'react';
+import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, forwardRef, RefObject, useCallback } from 'react';
 import clsx from 'clsx';
 
 import { PaletteColorClasses } from '~/interfaces/colors';
@@ -18,8 +18,8 @@ interface InitialProps {
   ref?: React.ForwardedRef<HTMLAnchorElement | HTMLButtonElement>;
   showLoader?: boolean;
   contentClassName?: string;
-  component?: React.FC<any> | ComponentType<any>;
-  innerComponent?: React.FC<any> | ComponentType<any>;
+  component?: React.ComponentType<any> | string;
+  innerComponent?: React.ComponentType<any> | string;
 }
 
 interface LinkProps extends InitialProps, AnchorHTMLAttributes<HTMLAnchorElement> {
