@@ -12,7 +12,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Wrapper: React.FC<Props> = ({ children }) => {
+const FLWrapper: React.FC<Props> = ({ children }) => {
   return (
     <LibraryProviderWrapper>
       {/*
@@ -28,4 +28,4 @@ const Wrapper: React.FC<Props> = ({ children }) => {
   );
 };
 
-export default Wrapper;
+export default FLWrapper;
