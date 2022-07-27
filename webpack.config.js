@@ -28,14 +28,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: '[hash:base64:5]',
-              },
-            },
-          },
+          { loader: 'css-loader' },
           { loader: 'sass-loader' },
           {
             loader: 'sass-resources-loader',
