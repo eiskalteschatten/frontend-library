@@ -8,7 +8,6 @@
   --primary-color: #{$lightPrimaryColor};
   --border-color: #{$lightBorderColor};
   --footer-background-color: #{darken($lightBg, 5%)};
-  --toolbar-height: #{$toolbarHeightLgUp};
 }
 
 @media (prefers-color-scheme: dark) {
