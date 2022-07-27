@@ -2,14 +2,14 @@
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: url('@static/fonts/MaterialIconsOutlined-Regular.otf') format("opentype");
+  src: url('../static/fonts/MaterialIconsOutlined-Regular.otf') format("opentype");
 }
 
 @font-face {
   font-family: 'Material Icons Filled';
   font-style: normal;
   font-weight: 400;
-  src: url('@static/fonts/MaterialIcons-Regular.ttf') format("truetype");
+  src: url('../static/fonts/MaterialIcons-Regular.ttf') format("truetype");
 }
 
 @mixin material-icons {

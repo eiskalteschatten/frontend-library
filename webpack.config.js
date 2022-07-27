@@ -18,6 +18,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'src/styles', to: 'styles' },
+        { from: 'src/static', to: 'static' },
       ],
     }),
   ],
@@ -42,7 +43,6 @@ module.exports = {
               resources: [
                 './src/styles/_mixins.scss',
                 './src/styles/_variables.scss',
-                './src/styles/_fonts.scss',
               ],
             },
           },
