@@ -5,6 +5,8 @@ import GlobalError from './GlobalError';
 import GlobalInfo from './GlobalInfo';
 
 import '../styles/reboot.css';
+import '../styles/globals.scss';
+import '../styles/fonts.scss';
 
 interface Props {
   children: React.ReactNode;
