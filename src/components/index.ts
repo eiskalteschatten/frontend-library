@@ -9,6 +9,8 @@ export * as Dialog from './Dialog';
 export * as DialogActionBar from './DialogActionBar';
 export * as DialogContent from './DialogContent';
 export * as FilterableList from './FilterableList';
+export * as GlobalError from './GlobalError';
+export * as GlobalInfo from './GlobalInfo';
 export * as Input from './Input';
 export * as Select from './Select';
 export * as SelectableList from './SelectableList';
