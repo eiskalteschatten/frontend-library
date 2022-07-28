@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LibraryProviderWrapper } from '~/LibraryContext';
+import { LibraryProviderWrapper } from '../LibraryContext';
 import GlobalError from './GlobalError';
 import GlobalInfo from './GlobalInfo';
 

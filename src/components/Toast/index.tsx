@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import clsx from 'clsx';
 
-import useLibraryContext from '~/lib/useLibraryContext';
+import useLibraryContext from '../../lib/useLibraryContext';
 
 import styles from './styles.module.scss';
 

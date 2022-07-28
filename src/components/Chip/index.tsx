@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from 'react';
 import clsx from 'clsx';
 
-import { PaletteColorClasses } from '~/interfaces/colors';
+import { PaletteColorClasses } from '../../interfaces/colors';
 
 import styles from './styles.module.scss';
 

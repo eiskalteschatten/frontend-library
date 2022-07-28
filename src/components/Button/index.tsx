@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, forwardRef, RefObject, useCallback } from 'react';
 import clsx from 'clsx';
 
-import { PaletteColorClasses } from '~/interfaces/colors';
+import { PaletteColorClasses } from '../../interfaces/colors';
 
 import Spinner from '../Spinner';
 
