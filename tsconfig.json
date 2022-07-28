@@ -21,10 +21,6 @@
     "removeComments": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./src",
-    "paths": {
-      "~/*": ["./*"],
-      "@static/*": ["static/*"],
-    },
     "outDir": "./dist",
     "pretty": true,
     "declaration": true

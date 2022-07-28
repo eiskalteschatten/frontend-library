@@ -52,13 +52,6 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    alias: {
-      '~': path.resolve(__dirname, 'src/'),
-      '@static': path.resolve(__dirname, 'src/static/'),
-    },
-    extensions: ['.tsx', '.ts', '.jsx', '.js'],
-  },
   externals: [nodeExternals()],
   devtool: 'source-map',
 };
