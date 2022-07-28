@@ -17,8 +17,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: 'src/styles', to: 'styles' },
-        { from: 'src/static', to: 'static' },
+        { from: 'src/styles', to: path.resolve(__dirname, 'styles') },
+        { from: 'src/static', to: path.resolve(__dirname, 'static') },
       ],
     }),
   ],

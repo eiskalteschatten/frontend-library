@@ -27,7 +27,8 @@
   "homepage": "https://github.com/eiskalteschatten/frontend-library#readme",
   "files": [
     "dist",
-    "src"
+    "static",
+    "styles"
   ],
   "devDependencies": {
     "@types/node": "^18.6.1",
