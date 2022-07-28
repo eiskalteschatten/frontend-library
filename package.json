@@ -7,7 +7,7 @@
   "scripts": {
     "test": "npm run lint",
     "lint": "eslint './**/*.{ts,json,js}'",
-    "build": "webpack",
+    "build": "rollup -c",
     "prepare": "husky install",
     "publish": "npm run build && npm publish"
   },
