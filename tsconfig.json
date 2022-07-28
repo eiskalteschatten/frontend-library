@@ -30,7 +30,6 @@
   ],
   "exclude": [
     "dist",
-    "node_modules",
-    "styles"
+    "node_modules"
   ]
 }
