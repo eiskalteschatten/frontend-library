@@ -9,7 +9,7 @@
     "lint": "eslint './**/*.{ts,json,js}'",
     "build": "webpack",
     "prepare": "husky install",
-    "prepublish": "npm run build"
+    "publish": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
