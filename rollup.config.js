@@ -8,7 +8,7 @@ const packageJson = require('./package.json');
 
 export default [
   {
-    input: 'src/index.ts',
+    input: './src/index.ts',
     output: [
       {
         file: packageJson.main,
@@ -21,11 +21,11 @@ export default [
         sourcemap: true,
       },
     ],
-    preserveModules: true,
+    // preserveModules: true,
     plugins: [
       resolve(),
       commonjs(),
-      scss(),
+      scss({ output: false }),
       typescript({ tsconfig: './tsconfig.json' }),
     ],
     external: [
@@ -35,8 +35,8 @@ export default [
     ],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+    input: './dist/esm/index.d.ts',
+    output: [{ file: './dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
   },
 ];
