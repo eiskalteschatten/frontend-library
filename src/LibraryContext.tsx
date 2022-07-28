@@ -4,7 +4,7 @@ import { WINDOW_WIDTHS } from './constants/window';
 
 const defaultWindowWidth = typeof window !== 'undefined' ? window.innerWidth : WINDOW_WIDTHS.lgMin;
 
-interface IContext {
+export interface IContext {
   windowWidth: number;
   globalInfo?: string;
   setGlobalInfo: (info: string) => void;

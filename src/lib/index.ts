@@ -1,1 +1,1 @@
-export * as useLibraryContext from './useLibraryContext';
+export { default as useLibraryContext } from './useLibraryContext';
