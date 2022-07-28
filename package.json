@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/eiskalteschatten/frontend-library#readme",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "devDependencies": {
     "@types/node": "^18.6.1",
@@ -35,7 +36,6 @@
     "@typescript-eslint/parser": "^5.30.7",
     "clean-webpack-plugin": "^4.0.0",
     "clsx": "^1.2.1",
-    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "eslint": "^8.20.0",
     "eslint-plugin-import": "^2.26.0",

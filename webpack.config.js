@@ -1,6 +1,5 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
@@ -15,12 +14,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyPlugin({
-      patterns: [
-        { from: 'src/styles', to: 'styles' },
-        { from: 'src/static', to: 'static' },
-      ],
-    }),
   ],
   module: {
     rules: [
