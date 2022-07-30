@@ -48,6 +48,7 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
     showLoader,
     contentClassName,
     className,
+    passHref,
     component: Component,
     innerComponent: InnerComponent,
     ...leftoverProps
@@ -97,6 +98,7 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
             to={href}  // react-router-dom Link
             href={href}  // next/link
             ref={ref as RefObject<any>}
+            passHref={!InnerComponent && passHref}
             className={!InnerComponent && classes}
             {...!InnerComponent && leftoverProps}
           >
