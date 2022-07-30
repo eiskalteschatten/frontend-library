@@ -13,7 +13,7 @@ export default [
     output: [
       {
         dir: tsconfg.compilerOptions.outDir,
-        format: 'esm',
+        format: 'cjs',
         sourcemap: true,
       },
     ],
