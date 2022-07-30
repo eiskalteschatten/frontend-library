@@ -1,0 +1,13 @@
+@import "./mixins";
+
+@font-face {
+  font-family: 'Material Icons Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../static/fonts/MaterialIconsOutlined-Regular.otf') format("opentype");
+}
+
+.material-icons {
+  font-family: 'Material Icons Outlined';
+  @include material-icons;
+}
