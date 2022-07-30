@@ -17,7 +17,6 @@ export default [
         sourcemap: true,
       },
     ],
-    preserveModulesRoot: true,
     plugins: [
       resolve(),
       commonjs(),
