@@ -11,7 +11,7 @@
     "build": "rollup -c",
     "postbuild": "node ./build-scripts/postbuild.js",
     "prepare": "husky install",
-    "publish": "npm run build && npm publish"
+    "build:publish": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
