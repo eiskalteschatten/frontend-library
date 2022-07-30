@@ -96,12 +96,15 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
           <Component
             to={href}  // react-router-dom Link
             href={href}  // next/link
-            className={InnerComponent && classes}
             ref={ref as RefObject<any>}
-            {...leftoverProps}
+            className={!InnerComponent && classes}
+            {...!InnerComponent && leftoverProps}
           >
             {InnerComponent ? (
-              <InnerComponent className={classes}>
+              <InnerComponent
+                className={classes}
+                {...leftoverProps}
+              >
                 <Content />
               </InnerComponent>
             ) : (
