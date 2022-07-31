@@ -4,7 +4,8 @@
   font-family: 'Material Icons Filled';
   font-style: normal;
   font-weight: 400;
-  src: url('../../static/fonts/MaterialIcons-Regular.ttf') format("truetype");
+  font-display: optional;
+  src: url('../../static/fonts/MaterialIcons-Regular.ttf') format('truetype');
 }
 
 .material-icons-filled {
