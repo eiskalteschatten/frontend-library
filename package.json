@@ -30,7 +30,8 @@
   "files": [
     "dist",
     "static",
-    "styles"
+    "styles",
+    "src"
   ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.1",
