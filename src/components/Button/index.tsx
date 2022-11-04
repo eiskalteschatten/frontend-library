@@ -23,13 +23,10 @@ interface InitialProps {
 
 interface LinkProps extends InitialProps, AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
-  // passHref is for the next/link component
-  passHref?: boolean;
 }
 
 interface ButtonProps extends InitialProps, ButtonHTMLAttributes<HTMLButtonElement> {
   href?: undefined;
-  passHref?: undefined;
 }
 
 type Props = LinkProps | ButtonProps;
@@ -48,7 +45,6 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
     showLoader,
     contentClassName,
     className,
-    passHref,
     component: Component,
     innerComponent: InnerComponent,
     ...leftoverProps
@@ -98,7 +94,6 @@ const Button: React.FC<Props> = forwardRef<HTMLAnchorElement | HTMLButtonElement
             to={href}  // react-router-dom Link
             href={href}  // next/link
             ref={ref as RefObject<any>}
-            passHref={!InnerComponent && passHref}
             className={!InnerComponent && classes}
             {...!InnerComponent && leftoverProps}
           >
